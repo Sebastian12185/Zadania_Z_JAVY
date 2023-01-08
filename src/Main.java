@@ -16,10 +16,10 @@ public class Main {
 //            dog.takeForWalk();
 //            System.out.println(dog.weight);
 //        }
-        Car car = new Car("Ford", "Mustang", 2020, "Red");
-        me.car=car;
+        Car car = new Car("Ford", "Mustang", 2020, "Red",60000.0);
 //        System.out.println(me);
         me.setSalary(1000.0);
         System.out.println(me.getSalary());
+        me.setCar(car);
     }
 }

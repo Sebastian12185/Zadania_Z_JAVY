@@ -29,4 +29,16 @@ public class Human {
         System.out.println("ZUS i US już wiedzą o zmianie wypłaty, więc nie ma sensu ukrywać dochodu.");
         this.salary = salary;
     }
+    public void setCar(Car car) {
+        if (salary > car.ofkoz) {
+            System.out.println("Udało się kupić samochód za gotówkę.");
+        } else if (salary > car.ofkoz / 12) {
+            System.out.println("Udało się kupić samochód na kredyt (no trudno).");
+        } else {
+            System.out.println("Niestety nie stać Cię na ten samochód. Zapisz się na studia i znajdź nową robotę albo idź po podwyżkę.");
+            return;
+        }
+
+        this.car = car;
+    }
 }
