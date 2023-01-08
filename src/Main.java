@@ -16,6 +16,8 @@ public class Main {
 //            dog.takeForWalk();
 //            System.out.println(dog.weight);
 //        }
-
+        Car car = new Car("Ford", "Mustang", 2020, "Red");
+        me.car=car;
+//        System.out.println(me);
     }
 }
