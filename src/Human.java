@@ -1,3 +1,5 @@
+import devices.Car;
+
 import java.util.Date;
 public class Human {
     String firstName, lastName;

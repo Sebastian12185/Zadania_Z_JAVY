@@ -1,3 +1,6 @@
+import devices.Car;
+import devices.Phone;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -10,16 +13,21 @@ public class Main {
         Phone phone = new Phone("POCO","F4 GT","black");
 //        System.out.println(phone);
         me.pet= dog;
-        dog.feed();
+//        dog.feed();
 //        System.out.println(dog);
 //        for(int i=1; i<=14; i++){
 //            dog.takeForWalk();
 //            System.out.println(dog.weight);
 //        }
         Car car = new Car("Ford", "Mustang", 2020, "Red",60000.0);
+        Car car2 = new Car("Ford", "Mustang", 2020, "Red",50000.0);
 //        System.out.println(me);
-        me.setSalary(1000.0);
-        System.out.println(me.getSalary());
+        me.setSalary(12000.0);
+//        System.out.println(me.getSalary());
         me.setCar(car);
+//        if(car.equals(car2)){
+//            System.out.println("Dwa samochody są takie same z opisem: "+car);
+//        }
+
     }
 }
