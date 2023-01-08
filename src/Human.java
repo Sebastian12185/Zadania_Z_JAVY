@@ -8,6 +8,6 @@ public class Human {
     }
     public String toString(){
         return "Imię: "+ this.firstName
-                +" Nazwisko: "+ this.lastName;
+                +" Nazwisko: "+ this.lastName+ " Zwierzę: "+ this.pet;
     }
 }
