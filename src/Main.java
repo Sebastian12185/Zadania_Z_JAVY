@@ -19,5 +19,7 @@ public class Main {
         Car car = new Car("Ford", "Mustang", 2020, "Red");
         me.car=car;
 //        System.out.println(me);
+        me.setSalary(1000.0);
+        System.out.println(me.getSalary());
     }
 }
