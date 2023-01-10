@@ -10,7 +10,7 @@ public class Main {
 //        System.out.println(me);
         Animal dog = new Animal("Borys","dog");
 //        System.out.println(dog);
-        Phone phone = new Phone("POCO","F4 GT","black");
+        Phone phone = new Phone("POCO","F4 GT","black",2022);
 //        System.out.println(phone);
         me.pet= dog;
 //        dog.feed();
@@ -28,6 +28,7 @@ public class Main {
 //        if(car.equals(car2)){
 //            System.out.println("Dwa samochody są takie same z opisem: "+car);
 //        }
-
+//        car.turnOn();
+//        phone.turnOn();
     }
 }

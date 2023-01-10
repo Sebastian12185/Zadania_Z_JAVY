@@ -2,19 +2,12 @@ package devices;
 
 import java.util.Objects;
 
-public class Car {
-    String model;
-    String producer;
-    int year;
-    String color;
+public class Car extends Device{
     public Double ofkoz;
 
 
     public Car(String model, String producer, int year, String color,Double ofkoz) {
-        this.model = model;
-        this.producer = producer;
-        this.year = year;
-        this.color = color;
+        super(producer,model,color,year);
         this.ofkoz = ofkoz;
     }
 
@@ -26,6 +19,10 @@ public class Car {
                 Objects.equals(model, car.model) &&
                 Objects.equals(producer, car.producer) &&
                 Objects.equals(color, car.color);
+    }
+
+    public void turnOn() {
+        System.out.println("Uruchamianie silnika...");
     }
 
     public String toString(){
