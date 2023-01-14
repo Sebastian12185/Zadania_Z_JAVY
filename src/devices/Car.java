@@ -2,9 +2,9 @@ package devices;
 
 import java.util.Objects;
 
-import Creatures.Sellable;
+import main.Sellable;
 
-import Creatures.Human;
+import main.Human;
 
 public class Car extends Device implements Sellable{
     public Double ofkoz;

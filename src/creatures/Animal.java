@@ -1,6 +1,9 @@
-package Creatures;
+package creatures;
 
-public class Animal implements Sellable{
+import main.Human;
+import main.Sellable;
+
+public abstract class Animal implements Sellable {
     private static final Double DEFAULT_DOG_WEIGHT = 12.3;
     private static final Double DEFAULT_CAT_WEIGHT = 5.0;
     private static final Double DEFAULT_MOUSE_WEIGHT = 1.5;
@@ -49,6 +52,10 @@ public class Animal implements Sellable{
         return "Imię: "+ this.name+ " Rasa: "+ this.specie+ " Waga: "+this.weight;
     }
 
+    public String getName(){
+        return this.specie;
+    }
+
     public void setAnimalOwner(Human owner) {
         this.owner = owner;
     }
@@ -74,5 +81,8 @@ public class Animal implements Sellable{
     @Override
     public void sell(Human seller, Human buyer, Double price) {
 
+    }
+
+    public void beEaten() throws Exception {
     }
 }

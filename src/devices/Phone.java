@@ -1,7 +1,7 @@
 package devices;
 
-import Creatures.Human;
-import Creatures.Sellable;
+import main.Human;
+import main.Sellable;
 
 public class Phone extends Device implements Sellable {
 

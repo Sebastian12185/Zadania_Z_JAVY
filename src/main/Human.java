@@ -1,7 +1,7 @@
-package Creatures;
+package main;
 
+import creatures.Animal;
 import devices.Car;
-import devices.Device;
 
 import java.util.Date;
 public class Human {

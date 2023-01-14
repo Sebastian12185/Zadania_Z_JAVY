@@ -1,6 +1,6 @@
-package Creatures;
+package main;
 
-import Creatures.Human;
+import main.Human;
 
 public interface Sellable {
     void sell(Human seller, Human buyer, Double price);
