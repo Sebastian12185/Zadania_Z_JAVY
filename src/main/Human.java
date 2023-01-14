@@ -1,14 +1,13 @@
 package main;
 
 import creatures.Animal;
-import devices.Car;
 
 import java.util.Date;
 public class Human {
     public String firstName;
     public String lastName;
     public Animal pet;
-    public Car car;
+    public String car;
     private Double salary;
     private Double cash;
 
@@ -40,12 +39,12 @@ public class Human {
         this.salary = salary;
         this.cash = salary;
     }
-    public void buyCar(Car car) {
+    public void buyCar(String car, Double ofkoz) {
     if(salary == null) {
         System.out.println("Najpierw idź do pracy zarobić pieniądze");
-    } else if (salary > car.ofkoz) {
+    } else if (salary > ofkoz) {
             System.out.println("Udało się kupić samochód za gotówkę.");
-        } else if (salary > car.ofkoz / 12) {
+        } else if (salary > ofkoz / 12) {
             System.out.println("Udało się kupić samochód na kredyt (no trudno).");
         } else {
             System.out.println("Niestety nie stać Cię na ten samochód. Zapisz się na studia i znajdź nową robotę albo idź po podwyżkę.");
@@ -54,7 +53,7 @@ public class Human {
         this.car = car;
     }
 
-    public Car getCar() {
+    public String getCar() {
         return car;
     }
 

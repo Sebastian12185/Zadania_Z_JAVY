@@ -6,7 +6,7 @@ import main.Sellable;
 
 import main.Human;
 
-public class Car extends Device implements Sellable{
+abstract class Car extends Device implements Sellable{
     public Double ofkoz;
     public Human owner;
 
@@ -29,6 +29,8 @@ public class Car extends Device implements Sellable{
     public void turnOn() {
         System.out.println("Uruchamianie silnika...");
     }
+
+    public Double getOfkoz(){ return this.ofkoz;}
 
     public String toString(){
         return "Model: "+ this.model+ " Producent: "+ this.producer+ " Rocznik: "+this.year+ " Kolor: "+this.owner;
@@ -58,7 +60,7 @@ public class Car extends Device implements Sellable{
     }
 
     @Override
-    public void sell(Human seller, Human buyer, Double price) {
+    public void sell(Human seller, Human buyer, Double price){}
 
-    }
+    public abstract void refuel();
 }
