@@ -2,13 +2,18 @@ package devices;
 
 import java.util.Objects;
 
-public class Car extends Device{
-    public Double ofkoz;
+import Creatures.Sellable;
 
+import Creatures.Human;
+
+public class Car extends Device implements Sellable{
+    public Double ofkoz;
+    public Human owner;
 
     public Car(String model, String producer, int year, String color,Double ofkoz) {
         super(producer,model,color,year);
         this.ofkoz = ofkoz;
+        this.owner = null;
     }
 
     public boolean equals(Object o) {
@@ -26,6 +31,34 @@ public class Car extends Device{
     }
 
     public String toString(){
-        return "Model: "+ this.model+ " Producent: "+ this.producer+ " Rocznik: "+this.year+ " Kolor: "+this.color;
+        return "Model: "+ this.model+ " Producent: "+ this.producer+ " Rocznik: "+this.year+ " Kolor: "+this.owner;
+    }
+    public void setCarOwner(Human owner) {
+        this.owner = owner;
+    }
+
+    public String getCarOwner() {
+        return "Właścicielem pojazdu jest: "+owner;
+    }
+
+
+    public void sell(Human seller, Human buyer, double price) {
+        if (buyer.getCash() == null || this.owner == null){
+            System.out.println("Tranzakcja nieudana");
+        }
+        else if(this.owner.equals(seller) && buyer.getCash() >= price) {
+            buyer.setCash(buyer.getCash() - price);
+            seller.setCash(seller.getCash() + price);
+            this.setCarOwner(buyer);
+
+            System.out.println("Transaction successful");
+        } else {
+            System.out.println("Transaction failed");
+        }
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
     }
 }
